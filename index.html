@@ -1,0 +1,23 @@
+<html lang="en" class=""><body>
+<div style="float:left;"><video muted id="video" width="640" height="480" autoplay="" src=""></video></div>
+<div style="float:left;"><video muted id="video2" width="640" height="480" autoplay="" src=""></video></div>
+
+
+
+<script>var video = document.getElementById('video');
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+    video.src = window.URL.createObjectURL(stream);
+    video.play();
+  });
+}
+</script>
+<script>var video2 = document.getElementById('video2');
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+    video2.src = window.URL.createObjectURL(stream);
+    video2.play();
+  });
+}
+</script>
+</body></html>
